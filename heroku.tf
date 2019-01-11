@@ -14,3 +14,8 @@ resource "heroku_app" "nginx-exersise" {
     "https://github.com/heroku/heroku-buildpack-nginx"
   ]
 }
+
+resource "heroku_addon" "postgresql" {
+  app  = "${heroku_app.nginx-exersise.name}"
+  plan = "heroku-postgresql:hobby-dev"
+}
