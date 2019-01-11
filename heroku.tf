@@ -10,6 +10,7 @@ resource "heroku_app" "nginx-exersise" {
   region = "us"
 
   buildpacks = [
+    "heroku/ruby",
     "https://github.com/heroku/heroku-buildpack-nginx"
   ]
 }
