@@ -9,5 +9,10 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :article, BlogType, null: false, description: "For-exersise implementation"
+    def article
+      Article.first
+    end
   end
 end
